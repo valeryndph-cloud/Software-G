@@ -32,3 +32,6 @@ Consulta [CONTRIBUTING.md](CONTRIBUTING.md) para ver las convenciones completas 
 ## Equipo
 
 - [Alejandro Varela Chacón](equipo/alejandro.md): bases de datos y backend.
+- Ximena Jiménez: diseñadora.
+- Juliana Betancur: diseñadora y frontend.
+- Valeryn Perea Higuita: líder del proyecto y backend.
