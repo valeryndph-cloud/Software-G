@@ -45,12 +45,12 @@ Coordinar el trabajo del equipo y aportar al desarrollo backend. En esta activid
 - **Fecha:** 12 de octubre de 2026
 - **Tarea o Issue:** [#19 — Crear bitácora individual de Valeryn Perea Higuita](https://github.com/valeryndph-cloud/Software-G/issues/19)
 - **Objetivo:** Crear mi registro individual en el repositorio siguiendo la guía.
-- **Qué hice:** Creé esta bitácora en Markdown y preparé una rama para trabajar el Issue.
+- **Qué hice:** Creé esta bitácora en Markdown, trabajé en una rama desde `main`, la subí al repositorio y abrí un Pull Request hacia `main`.
 - **Rama utilizada:** `docs/19-bitacora-valeryn`
-- **Commits realizados:** Pendiente
-- **Pull Request:** Pendiente
-- **Revisión:** Juliana Betancur; pendiente de realizar
-- **Resultado / evidencia:** En curso. El PR, el comentario de revisión, la corrección y la fusión quedan pendientes.
+- **Commits realizados:** [Historial de commits del PR #23](https://github.com/valeryndph-cloud/Software-G/pull/23/commits)
+- **Pull Request:** [#23 — docs: crear bitacora individual de valeryn](https://github.com/valeryndph-cloud/Software-G/pull/23)
+- **Revisión:** Solicitada a Juliana Betancur; comentario pendiente.
+- **Resultado / evidencia:** PR abierto y esperando revisión. El comentario, la corrección y la fusión quedan pendientes.
 
 ## Colaboración con el equipo
 
@@ -68,7 +68,6 @@ Coordinar el trabajo del equipo y aportar al desarrollo backend. En esta activid
 ## Pendientes
 
 - Completar los datos del curso o ficha.
-- Registrar el commit y el enlace al Pull Request de este Issue.
 - Atender el comentario de revisión de Juliana y registrar la corrección.
 - Actualizar el resultado cuando el Pull Request sea aprobado y fusionado.
 - Revisar el Pull Request de Alejandro cuando esté disponible y registrar el comentario realizado.
