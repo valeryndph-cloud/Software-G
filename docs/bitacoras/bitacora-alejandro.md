@@ -1,5 +1,10 @@
 # Bitácora individual — Alejandro Varela Chacón
 
+## Rol y objetivo de participación
+
+- **Rol en el equipo:** Bases de datos y backend.
+- **Objetivo de mi participación:** Apoyar el desarrollo del sistema desde la parte del backend y la gestión de los datos, procurando que la información se procese y almacene correctamente y que las funciones del sistema puedan integrarse de forma organizada.
+
 ## Registro de actividades
 
 ### 14 de octubre de 2026
@@ -12,11 +17,12 @@
 - **Commit inicial:** `d4ac9c4` — `docs: agregar bitacora individual de Alejandro`.
 - **Rama de trabajo:** `20-bitacora-alejandro`.
 - **Pull Request:** [PR #26 — Bitácora individual de Alejandro](https://github.com/valeryndph-cloud/Software-G/pull/26). Estado: abierto, dirigido a `main`.
-- **Revisión de Valeryn Perea Higuita:** Pendiente de comentario de mejora.
-- **Correcciones y respuesta al comentario:** Pendientes de la revisión.
+- **Revisión de Valeryn Perea Higuita:** El 14 de octubre de 2026 solicitó agregar el rol en el equipo y un breve objetivo de participación.
+- **Corrección realizada:** Se agregó el apartado “Rol y objetivo de participación” para explicar el rol de bases de datos y backend y el propósito de ese aporte.
+- **Respuesta a la revisión y nueva evaluación:** Pendientes.
 - **Aprobación y fusión del Pull Request:** Pendientes.
 - **Evidencias:** Registrar los enlaces y capturas de los comandos, el commit, el Pull Request y su revisión a medida que se completen.
 
 ## Estado de la actividad
 
-La bitácora se encuentra en elaboración. Los datos pendientes se actualizarán a medida que se completen las etapas de trabajo, revisión y fusión del Pull Request.
+La bitácora incluye el rol y el objetivo de participación solicitados durante la revisión. Quedan pendientes la nueva evaluación del Pull Request, su aprobación y su fusión.
