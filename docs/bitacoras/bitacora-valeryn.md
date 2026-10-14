@@ -5,7 +5,8 @@
 - **Proyecto:** Software-G
 - **Integrante:** Valeryn Perea Higuita
 - **Rol en el equipo:** Líder del proyecto y backend
-- **Curso o ficha:** Pendiente de completar
+- **Formación:** Análisis y Desarrollo de Software
+- **Ficha:** 3408936
 - **Periodo registrado:** 12 de octubre de 2026
 
 ## Objetivo de mi participación
