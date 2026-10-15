@@ -25,7 +25,6 @@ El repositorio se encuentra en una etapa inicial. La estructura para el código 
 ├── .gitignore
 ├── src/                 # Código fuente; por ahora contiene .gitkeep
 ├── docs/
-│   ├── bitacora/        # Entradas breves de bitácora de la actividad
 │   └── bitacoras/       # Bitácoras individuales ampliadas
 └── equipo/              # Perfiles de los integrantes
 ```
