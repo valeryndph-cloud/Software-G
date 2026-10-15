@@ -5,8 +5,9 @@
 - **Proyecto:** Software-G
 - **Integrante:** Ximena Jiménez
 - **Issue asignado:** [#21 — Crear bitácora individual de Ximena Jiménez](https://github.com/valeryndph-cloud/Software-G/issues/21)
+- **Issue de actualización:** [#33 — Actualizar el estado final de la bitácora de Ximena](https://github.com/valeryndph-cloud/Software-G/issues/33)
 - **Revisor del Pull Request:** Alejandro Varela Chacón
-- **Rama de la bitácora:** `docs/bitacora-ximena`
+- **Rama de la bitácora original:** `docs/bitacora-ximena`
 - **Periodo de actividades con evidencia consultada:** 8 al 15 de octubre de 2026
 
 ## 2. Registro de actividades
@@ -40,25 +41,26 @@
 - **Objetivo:** Registrar el trabajo realizado y adjuntar evidencias verificables.
 - **Actividad realizada:** Creé una primera versión de la bitácora en Markdown y abrí un Pull Request para que un compañero revisara el cambio.
 - **Rama utilizada:** `docs/bitacora-ximena`.
-- **Commits:** [Consultar el historial del PR #24](https://github.com/valeryndph-cloud/Software-G/pull/24/commits). La revisión inicial registraba tres commits; el historial actualizado puede consultarse en ese enlace.
-- **Pull Request:** [#24 — docs: agregar primera bitácora de Ximena](https://github.com/valeryndph-cloud/Software-G/pull/24).
+- **Commits:** [Consultar el historial de commits del PR #24](https://github.com/valeryndph-cloud/Software-G/pull/24/commits).
+- **Pull Request:** [#24 — docs: corregir y completar bitácora individual de Ximena](https://github.com/valeryndph-cloud/Software-G/pull/24).
 - **Revisión recibida:** Alejandro Varela Chacón dejó observaciones el 14 y el 15 de octubre de 2026.
-- **Observaciones:** Corregir la ruta del archivo, completar el registro con datos y evidencias reales, mejorar la ortografía y responder al comentario de revisión.
-- **Respuesta al comentario:** Se publicó una respuesta el 15 de octubre de 2026. La corrección del archivo se registra en esta actualización de la misma rama.
-- **Estado actual:** Pull Request abierto y pendiente de una nueva revisión y aprobación.
-- **Evidencia:** [PR #24 y conversación de revisión](https://github.com/valeryndph-cloud/Software-G/pull/24).
+- **Observaciones:** Corregir la ruta del archivo, completar el registro con datos y evidencias reales, mejorar la ortografía, responder al comentario de revisión y evitar cambios no necesarios en `README.md`.
+- **Respuesta al comentario:** Se publicó una respuesta el 15 de octubre de 2026. La ruta y el contenido se corrigieron en la misma rama.
+- **Resultado final:** El PR #24 fue aprobado y fusionado el 15 de octubre de 2026. El Issue #21 quedó cerrado.
+- **Evidencia:** [PR #24 y su historial de revisión y commits](https://github.com/valeryndph-cloud/Software-G/pull/24).
 
-### Actividad 4: Corrección de la bitácora según la revisión
+### Actividad 4: Actualización del estado final de la bitácora
 
-- **Fecha:** 15 de octubre de 2026.
-- **Objetivo:** Ajustar la bitácora a los criterios del Issue #21.
-- **Cambios realizados en esta actualización:** Se utiliza la ruta solicitada, se organiza el registro de actividades con fechas y enlaces comprobables, y se corrigen errores de ortografía.
-- **Rama utilizada:** `docs/bitacora-ximena`, la misma rama del Pull Request abierto.
-- **Commit de esta actualización:** Consultar el [historial de commits del PR #24](https://github.com/valeryndph-cloud/Software-G/pull/24/commits).
-- **Nueva revisión del compañero:** Pendiente.
-- **Resolución de la conversación de revisión:** Pendiente.
-- **Aprobación y fusión del PR #24:** Pendiente.
-- **Entrega del enlace final en Classroom:** Pendiente.
+- **Fecha de actualización:** 15 de octubre de 2026.
+- **Issue relacionado:** [#33 — Actualizar el estado final de la bitácora de Ximena](https://github.com/valeryndph-cloud/Software-G/issues/33).
+- **Objetivo:** Registrar el resultado final de la revisión del PR #24 sin dejar como pendientes las acciones que ya se completaron.
+- **Cambios realizados:** Se actualiza el estado del PR #24, se conserva el enlace a su historial real y se diferencia lo completado de lo que todavía requiere confirmación.
+- **Rama de la bitácora original:** `docs/bitacora-ximena`.
+- **Revisión final de Alejandro Varela Chacón:** Aprobación registrada el 15 de octubre de 2026. [Consultar las revisiones del PR #24](https://github.com/valeryndph-cloud/Software-G/pull/24).
+- **Resolución de la conversación de revisión:** En la consulta del historial del 15 de octubre de 2026, el hilo original sobre la ruta incorrecta aparece como obsoleto, pero todavía marcado como no resuelto. No se encontró un registro explícito de resolución. [Consultar la conversación del PR #24](https://github.com/valeryndph-cloud/Software-G/pull/24).
+- **Aprobación del PR #24:** Completada el 15 de octubre de 2026 por Alejandro Varela Chacón.
+- **Fusión del PR #24:** Completada el 15 de octubre de 2026. [Consultar el PR #24 y su historial](https://github.com/valeryndph-cloud/Software-G/pull/24).
+- **Entrega del enlace en Classroom:** Pendiente de confirmación; no se encontró evidencia de esta entrega en el repositorio.
 
 ## 3. Aprendizajes
 
@@ -69,8 +71,5 @@
 
 ## 4. Pendientes
 
-- Esperar la nueva revisión de Alejandro Varela Chacón.
-- Registrar el resultado de la revisión cuando ocurra.
-- Actualizar el estado de la conversación de revisión cuando sea resuelta.
-- Registrar la fecha de aprobación y fusión cuando sucedan.
-- Compartir en Classroom el enlace del Pull Request finalizado.
+- Confirmar si el equipo requiere que se marque como resuelto el hilo de revisión obsoleto del PR #24, ya que el historial consultado todavía lo muestra como no resuelto.
+- Entregar en Classroom el enlace al PR #24, si todavía no se ha realizado esa entrega.
