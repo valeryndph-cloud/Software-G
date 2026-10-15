@@ -26,7 +26,8 @@ El repositorio se encuentra en una etapa inicial. La estructura para el código 
 ├── src/                 # Código fuente; por ahora contiene .gitkeep
 ├── docs/
 │   └── bitacoras/       # Bitácoras individuales ampliadas
-└── equipo/              # Perfiles de los integrantes
+├── equipo/              # Perfiles de los integrantes
+└── rapido-paisa/        # Simulación de entregas
 ```
 
 ## Colaboración
