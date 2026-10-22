@@ -1,10 +1,17 @@
-# Datos del cliente: se generan, no se suben
+# Datos de entrada y resultados generados por la simulación
 bandeja_entrada/
 pedidos_ordenados/
 revisar/
+datos/
+resultados/
+*.csv
+*.json
+*.txt
 
-# Archivos que crea Python solo
+# Archivos que crea Python
 __pycache__/
+*.py[cod]
 
-# Entorno virtual, si se usa
+# Entorno virtual
 .venv/
+venv/
