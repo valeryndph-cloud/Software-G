@@ -1,5 +1,6 @@
 """Organiza los pedidos recibidos por sede sin modificar los originales."""
 
+import re
 import shutil
 import unicodedata
 from pathlib import Path
@@ -15,27 +16,48 @@ LECTORES = {
 }
 
 SEDES = ("Itagüí", "Envigado", "Sabaneta", "Bello")
+VARIANTES_SEDE = {
+    "Itagüí": ("itagui", "itagüí", "itagui antioquia"),
+    "Envigado": ("envigado", "env"),
+    "Sabaneta": ("sabaneta",),
+    "Bello": ("bello",),
+}
+
+
+def normalizar_sede(texto):
+    """Normaliza el texto de sede para comparar tildes y mayúsculas."""
+    texto = str(texto).strip().casefold()
+    texto = unicodedata.normalize("NFD", texto)
+    texto = "".join(
+        caracter
+        for caracter in texto
+        if unicodedata.category(caracter) != "Mn"
+    )
+    return re.sub(r"[^a-z0-9 ]", " ", texto)
 
 
 def obtener_sede(pedido):
-    """Reconoce la sede y contempla Bello mientras se integra su soporte general."""
-    sede = reconocer_sede(pedido)
-    if sede is not None:
-        return sede
+    """Identifica la sede usando el campo sede del pedido."""
+    if not isinstance(pedido, dict):
+        return reconocer_sede(pedido)
 
-    # La función del PR de sedes aún no contempla Bello.
-    # Este respaldo usa solo el campo sede, sin alterar el módulo de otro integrante.
-    if isinstance(pedido, dict):
-        nombre_sede = str(pedido.get("sede", "")).strip().casefold()
-        nombre_sede = "".join(
-            caracter
-            for caracter in unicodedata.normalize("NFD", nombre_sede)
-            if unicodedata.category(caracter) != "Mn"
-        )
-        if nombre_sede == "bello":
-            return "Bello"
+    texto_sede = normalizar_sede(pedido.get("sede", ""))
+    if not texto_sede.strip():
+        return None
 
-    return None
+    sedes_encontradas = []
+    for sede, variantes in VARIANTES_SEDE.items():
+        for variante in variantes:
+            variante_normalizada = normalizar_sede(variante)
+            if re.search(r"\\b" + re.escape(variante_normalizada) + r"\\b", texto_sede):
+                sedes_encontradas.append(sede)
+                break
+
+    # Si el campo menciona más de una sede, no asigna el pedido arbitrariamente.
+    if len(sedes_encontradas) != 1:
+        return None
+
+    return sedes_encontradas[0]
 
 
 def organizar_pedidos():
