@@ -53,7 +53,7 @@ Por ahora, ese archivo todavía no organiza los pedidos. Los módulos `sedes.py`
 
 ## Archivos generados y Git
 
-El archivo `.gitignore` excluye las carpetas `bandeja_entrada/`, `pedidos_ordenados/`, `revisar/`, `datos/` y `resultados/`, además de los archivos temporales de Python y los entornos virtuales. Estas carpetas contienen datos de entrada o resultados generados, por lo que no deben subirse al repositorio.
+El archivo `.gitignore` excluye las carpetas `bandeja_entrada/`, `pedidos_ordenados/`, `revisar/`, `datos/` y `resultados/`, además de los archivos temporales de Python, los entornos virtuales y los archivos `.env` que pueden contener datos privados. Estas carpetas contienen datos de entrada o resultados generados, por lo que no deben subirse al repositorio.
 
 Para revisar qué archivos detecta Git, ejecuta desde la carpeta del repositorio:
 
