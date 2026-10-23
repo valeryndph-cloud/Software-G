@@ -36,6 +36,12 @@ def normalizar_sede(texto):
     return re.sub(r"[^a-z0-9 ]", " ", texto)
 
 
+def valor_valido(valor):
+    """Acepta valores numéricos no negativos, incluidos importes como $1.000."""
+    valor_normalizado = re.sub(r"[$.,\s]", "", str(valor))
+    return valor_normalizado.isdigit()
+
+
 def obtener_sede(pedido):
     """Identifica la sede usando el campo sede del pedido."""
     if not isinstance(pedido, dict):
@@ -93,7 +99,7 @@ def organizar_pedidos():
             continue
 
         pedido = lector(archivo)
-        if pedido is None:
+        if pedido is None or not valor_valido(pedido.get("valor", "")):
             omitidos += 1
             continue
 
