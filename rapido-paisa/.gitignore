@@ -9,6 +9,9 @@ resultados/
 __pycache__/
 *.py[cod]
 
-# Entorno virtual
+# Entornos virtuales y datos privados
 .venv/
 venv/
+.env
+.env.*
+!.env.example
