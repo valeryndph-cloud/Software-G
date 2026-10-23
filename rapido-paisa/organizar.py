@@ -71,6 +71,9 @@ def organizar_pedidos():
         print("Ejecuta primero: python generar_pedidos.py")
         return
 
+    # Los resultados se generan de nuevo para no conservar copias antiguas.
+    if salida.exists():
+        shutil.rmtree(salida)
     salida.mkdir(parents=True, exist_ok=True)
 
     for sede in SEDES:
