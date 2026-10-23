@@ -49,7 +49,7 @@ def obtener_sede(pedido):
     for sede, variantes in VARIANTES_SEDE.items():
         for variante in variantes:
             variante_normalizada = normalizar_sede(variante)
-            if re.search(r"\\b" + re.escape(variante_normalizada) + r"\\b", texto_sede):
+            if re.search(r"\b" + re.escape(variante_normalizada) + r"\b", texto_sede):
                 sedes_encontradas.append(sede)
                 break
 
