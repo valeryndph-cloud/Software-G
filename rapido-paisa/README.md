@@ -4,57 +4,68 @@ Programa de práctica para organizar pedidos de domicilios de las sedes de Itag�
 
 ## Archivos principales
 
-- `generar_pedidos.py`: script entregado por el cliente para generar los pedidos de prueba. Cuando esté disponible, no se debe modificar.
-- `organizar.py`: programa principal que ejecuta la organización de pedidos.
-- `sedes.py`: reconoce a qué sede pertenece un pedido.
-- `lectores.py`: permite leer pedidos en archivos TXT, CSV y JSON.
-- `.gitignore`: evita que los datos y resultados generados se suban al repositorio.
+- `generar_pedidos.py`: script entregado por el cliente para crear pedidos de prueba. No se debe modificar.
+- `organizar.py`: será el programa principal que organiza los pedidos. Actualmente solo tiene el comentario inicial, así que todavía no realiza la organización.
+- `sedes.py`: debe contener la función para reconocer la sede de cada pedido.
+- `lectores.py`: debe contener las funciones para leer pedidos en archivos TXT, CSV y JSON.
+- `.gitignore`: evita que los datos de entrada y los resultados generados se suban a GitHub.
 
 ## Requisitos
 
-- Python 3 instalado.
+- Tener Python 3 instalado.
 - Abrir una terminal dentro de la carpeta `rapido-paisa`.
 
-## Cómo ejecutar
+## Cómo generar los pedidos de prueba
 
-Cuando el cliente haya entregado `generar_pedidos.py`, ejecuta primero:
+Para crear el primer lote, ejecuta:
 
 ```bash
 python generar_pedidos.py
 ```
 
-Después ejecuta el programa principal:
+Para crear el segundo lote, ejecuta:
+
+```bash
+python generar_pedidos.py --lote 2
+```
+
+En algunos equipos con Windows puedes usar `py` en lugar de `python`.
+
+**Importante:** el generador borra la carpeta `bandeja_entrada/` si ya existe y la vuelve a crear. Si tienes archivos propios allí, guárdalos antes de ejecutar el generador. No modifiques `generar_pedidos.py`, porque es el archivo entregado por el cliente.
+
+## Cómo ejecutar el programa principal
+
+Cuando la función de organización esté implementada en `organizar.py`, se podrá ejecutar con:
 
 ```bash
 python organizar.py
 ```
 
-En algunos equipos de Windows, puede ser necesario usar `py` en lugar de `python`.
+Por ahora, ese archivo todavía no organiza los pedidos. Los módulos `sedes.py` y `lectores.py` también tienen que contar con sus funciones implementadas para completar el proceso.
 
-> Nota: los scripts deben estar implementados y el archivo `generar_pedidos.py` debe estar disponible para que estos comandos funcionen. El archivo del cliente no debe modificarse.
+## Cómo funciona el sistema
 
-## Cómo funciona
-
-1. Se generan o reciben los pedidos de entrada.
-2. Se leen los datos de cada pedido según su formato.
-3. Se identifica la sede correspondiente: Itagüí, Envigado o Sabaneta.
-4. El programa principal organiza los pedidos y separa los casos que necesiten revisión, según las reglas de la actividad.
+1. El generador crea archivos de pedidos de prueba en `bandeja_entrada/`, con diferentes nombres y formatos.
+2. El lector debe abrir los archivos TXT, CSV y JSON y obtener los datos de cada pedido.
+3. La función de reconocimiento debe identificar si el pedido corresponde a Itagüí, Envigado o Sabaneta.
+4. El programa principal debe organizar las copias de los pedidos por sede y separar los que tengan datos dañados o no permitan identificar la sede.
+5. Los archivos originales de `bandeja_entrada/` deben conservarse sin modificaciones.
 
 ## Archivos generados y Git
 
-Los directorios `bandeja_entrada/`, `pedidos_ordenados/`, `revisar/`, `datos/` y `resultados/` están en `.gitignore` porque contienen datos de entrada o resultados creados al ejecutar el programa. No deben entregarse como archivos versionados.
+El archivo `.gitignore` excluye las carpetas `bandeja_entrada/`, `pedidos_ordenados/`, `revisar/`, `datos/` y `resultados/`, además de los archivos temporales de Python y los entornos virtuales. Estas carpetas contienen datos de entrada o resultados generados, por lo que no deben subirse al repositorio.
 
-Para revisar qué archivos Git detecta, ejecuta desde la carpeta del repositorio:
+Para revisar qué archivos detecta Git, ejecuta desde la carpeta del repositorio:
 
 ```bash
 git status --short
 ```
 
-Después de generar pedidos y resultados, vuelve a ejecutar `git status --short`. Los archivos guardados en las carpetas ignoradas no deben aparecer como archivos nuevos para subir. No agregues datos generados manualmente con `git add`.
+Después de generar pedidos o resultados, vuelve a ejecutar el comando. Los archivos dentro de las carpetas ignoradas no deberían aparecer como archivos nuevos para subir. No agregues manualmente los datos generados con `git add`.
 
-## Comprobación rápida de la función de sedes
+## Comprobación de la función de sedes
 
-La función `reconocer_sede(pedido)` recibe un texto o un diccionario. Devuelve `"Itagüí"`, `"Envigado"` o `"Sabaneta"`. Si no puede identificar la sede, devuelve `None` para que el pedido pueda revisarse.
+Cuando `reconocer_sede(pedido)` esté implementada, debe aceptar el texto o los datos de un pedido, reconocer Itagüí, Envigado o Sabaneta aunque cambien las mayúsculas o las tildes, y devolver `None` cuando no pueda identificar la sede. Los casos que devuelvan `None` deben quedar pendientes de revisión.
 
 ## Flujo de trabajo del equipo
 
