@@ -6,7 +6,6 @@ import unicodedata
 from pathlib import Path
 
 from lectores import leer_csv, leer_json, leer_txt
-from sedes import reconocer_sede
 
 
 LECTORES = {
@@ -37,15 +36,16 @@ def normalizar_sede(texto):
 
 
 def valor_valido(valor):
-    """Acepta valores numéricos no negativos, incluidos importes como $1.000."""
-    valor_normalizado = re.sub(r"[$.,\s]", "", str(valor))
-    return valor_normalizado.isdigit()
+    """Acepta enteros no negativos e importes con puntos de miles, como $1.000."""
+    texto = str(valor).strip()
+    return re.fullmatch(r"\$?\d+(?:\.\d{3})*", texto) is not None
 
 
 def obtener_sede(pedido):
-    """Identifica la sede usando el campo sede del pedido."""
+    """Identifica una sede a partir del campo 'sede' de un pedido validado."""
+    # Los lectores entregan diccionarios. Otros tipos no se clasifican por texto libre.
     if not isinstance(pedido, dict):
-        return reconocer_sede(pedido)
+        return None
 
     texto_sede = normalizar_sede(pedido.get("sede", ""))
     if not texto_sede.strip():
